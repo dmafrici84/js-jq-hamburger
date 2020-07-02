@@ -1,20 +1,34 @@
-// PRIMO METODO. Utilizzo la classe presente nel css
-// al click sull'icona del menu-hamburger si vede il menu
-$(".header-right > a").click(
+// // PRIMO METODO. Utilizzo la classe presente nel css
+// // al click sull'icona del menu-hamburger si vede il menu
+// $(".header-right > a").click(
+//   function() {
+//     $(".hamburger-menu").addClass("active");
+//   }
+// );
+//
+// // al click sulla X scompare il menu
+// $(".close").click(
+//   function() {
+//     $(".hamburger-menu").removeClass("active");
+//   }
+// );
+
+// SECONDO METODO.Utilizzo la classe presente nel css ma cambio il modo di richiamere i tag dell' html
+$("div.header-right > a").click(
   function() {
-    $(".hamburger-menu").addClass("active");
+    $("header > div:last-child").addClass("active");
   }
 );
 
 // al click sulla X scompare il menu
-$(".close").click(
+$("div.hamburger-menu > a").click(
   function() {
-    $(".hamburger-menu").removeClass("active");
+    $("header > div:last-child").removeClass("active");
   }
 );
 
 
-// SECONDO METODO. Utilizzo .show e .hide
+// TERZO METODO. Utilizzo .show e .hide
 // // al click sull'icona del menu-hamburger si vede il menu
 // $(".header-right > a").click(
 //   function() {
